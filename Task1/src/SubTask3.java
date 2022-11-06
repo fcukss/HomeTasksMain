@@ -9,7 +9,7 @@ public class SubTask3 {
             x = y;
             y = temp;
         }
-        
+
         System.out.println(x);
     }
 }
