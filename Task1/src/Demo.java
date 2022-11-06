@@ -3,7 +3,7 @@ public class Demo {
 
         SubTask1.main(new String[] {"5.6", "6.6"});
         SubTask2.main(new String[] {"string1", "string2", "string3"});
-        SubTask3.main(new String[] {"45", "67"});
+        SubTask3.main(new String[] {"40", "60"});
         SubTask4.main(new String[] {"45"});
         SubTask5.main(new String[] {"100"});
         SubTask6.main(null);
