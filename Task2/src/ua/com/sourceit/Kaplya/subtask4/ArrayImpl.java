@@ -54,7 +54,7 @@ public class ArrayImpl implements Array {
 
     @Override
     public Object get(int index) {
-        if (index<0 || index>=array.length)
+        if (index < 0 || index >= array.length)
             throw new NoSuchElementException("нет елемента в массиве");
         return array[index];
     }
@@ -65,7 +65,7 @@ public class ArrayImpl implements Array {
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(element)) {
                 index = i;
-              break;
+                break;
             } else {
                 index = -1;
             }
@@ -75,7 +75,7 @@ public class ArrayImpl implements Array {
 
     @Override
     public void remove(int index) {
-        if (index<0 || index>=array.length)
+        if (index < 0 || index >= array.length)
             throw new NoSuchElementException("нет елемента в массиве");
 
         Object[] arrRemove = new Object[array.length - 1];
@@ -151,7 +151,10 @@ public class ArrayImpl implements Array {
 
             for (int i = 0; i < size(); i++) {
                 if (i != current - 1) {
-                    arrRemove[i < current - 1 ? i : i - 1] = array[i];
+                    if (i < current - 1)
+                             arrRemove[i] = array[i];
+                    else
+                        arrRemove[i-1]=array[i];
                 }
             }
             array = arrRemove;
