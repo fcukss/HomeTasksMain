@@ -2,6 +2,17 @@ import java.util.Stack;
 
 public class SubTask1 {
 
+    public static boolean isOpen(char ch){
+        //возрашаем true если ch равен таким условиям
+        return  ch == '(' || ch == '[';
+    }
+
+    public static boolean isPair(char open, char close){
+        //возращаем true если такие условия пары
+        return  open == '(' && close == ')'||
+                open == '[' && close == ']';
+    }
+
     public static boolean testString(String str) {
         //удаляем буквы и цифры из строчки
         String s = str.replaceAll("[A-Za-z0-9]", "");
@@ -24,25 +35,9 @@ public class SubTask1 {
                 }
             }
         }
+        //проверяем пустой ли стек. если пустой то true
         return stack.isEmpty();
     }
-
-        public static boolean isOpen(char ch){
-            //возрашаем true если ch равен таким условиям
-            return  ch == '(' || ch == '[';
-        }
-
-        public static boolean isPair(char open, char close){
-            //возращаем true если такие условия пары
-            return  open == '(' && close == ')'||
-                    open == '[' && close == ']';
-        }
-
-        //проверяем пустой ли стек. если пустой то true
-
-
-
-
 
     public static void main(String[] args) {
 
