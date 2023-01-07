@@ -35,8 +35,8 @@ public class SubTask6 {
 
     public static void main(String[] args) {
 
-        System.out.println(numberOfColumn("BC"));
-        System.out.println(charOfColumn(55));
+        System.out.println(numberOfColumn("AAA"));
+        System.out.println(charOfColumn(731));
         System.out.println(rightColumn("AAA"));
     }
 }
