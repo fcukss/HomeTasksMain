@@ -20,12 +20,11 @@ public class SubTask3 {
         Scanner scanner = new Scanner(file);
         List<String> list = new ArrayList<>();
         Stack<String> strings = new Stack<>();
+
         while (scanner.hasNext()) {
             list.add(scanner.nextLine());
         }
-
         list.forEach(strings::push);
-
         while (!strings.empty()) {
             pw.println(strings.peek());
             strings.pop();
